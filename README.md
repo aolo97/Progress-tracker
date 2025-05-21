@@ -24,7 +24,7 @@ Green: 19:00 – 23:59
 
 ---
 
-[Screenshot](public/screenshot.png)
+![Screenshot](public/screenshot.png)
 
 ---
 
