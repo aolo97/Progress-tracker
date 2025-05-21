@@ -1,6 +1,6 @@
 {
-  "short_name": "Progress Tracker App",
-  "name": "Create React App Sample",
+  "short_name": "Progress-tracker",
+  "name": "Progress Tracker App",
   "icons": [
     {
       "src": "favicon.ico",
