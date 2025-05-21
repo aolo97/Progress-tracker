@@ -1,18 +1,32 @@
-# Progress Tracker App
+**Weekly Progress Tracker**
 
-This is a simple React application that displays a daily progress tracker with styled components and dynamic progress bars.
-
-## Features
-
-* **Daily Progress Tracking:** Visually represents daily progress for each day of the week.
-* **Dynamic Progress Bars:** The background color of the progress bar changes based on the percentage completed (e.g., red for low, yellow for medium, green for high).
-* **Weekend Highlighting:** Saturdays and Sundays have a distinct visual style.
-* **Styled Components:** Utilizes `styled-components` for component-based styling, keeping styles encapsulated and maintainable.
+A React application that visualizes the progress of the current week using a vertical bar layout. Each day (Mon–Sun) is color-coded based on the current hour and filled proportionally to show progress through the day.
 
 ---
 
-## Technologies Used
+**Features**
 
-* **React:** A JavaScript library for building user interfaces.
-* **Styled Components:** A CSS-in-JS library for styling React components.
-* **Node.js & npm:** JavaScript runtime and package manager for project setup and dependency management.
+⏱ Live updating clock with seconds
+
+📅 7-day view: Mon to Sun
+
+🎨 Color-coded progress bars by time of day:
+
+Red: 00:00 – 06:59
+
+Yellow: 07:00 – 12:59
+
+Orange: 13:00 – 18:59
+
+Green: 19:00 – 23:59
+
+📈 Each day’s bar fills based on the current hour
+
+---
+
+[Screenshot](public/screenshot.png)
+
+---
+
+**Acknowledgement** 
+[Scrimba](http://scrimba.com)
