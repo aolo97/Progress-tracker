@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Section from './components/Section';
-import getDayProgressColor from './components/GetProgressColor';
+import GetProgressColor from './components/GetProgressColor';
 
 const Title = styled.h1`
   color: #b19cd9;
@@ -41,7 +41,7 @@ const App = () => {
   const weeklyProgressData = daysOfWeek.map((day, index) => {
     const isToday = index === currentDayIndex;
     const progress = isToday ? Math.floor((currentHour / 24) * 100) : index < currentDayIndex ? 100 : 0;
-    const color = isToday || index < currentDayIndex ? getDayProgressColor(currentHour) : '#CCCCCC';
+    const color = GetProgressColor(currentHour, index, currentDayIndex);
 
     return {
       id: index,
