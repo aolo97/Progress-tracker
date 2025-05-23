@@ -1,13 +1,18 @@
-const GetProgressColor = (hour, dayIndex, currentDayIndex) => {
-
-  if (dayIndex < currentDayIndex) return '#6BFF6B';
-  if (dayIndex > currentDayIndex) return '#CCCCCC';
+const getDayColor = (dayIndex, currentDayIndex) =>
+  dayIndex < currentDayIndex ? '#6BFF6B' :
+  dayIndex > currentDayIndex ? '#CCCCCC' :
+  null;
   
-  if (hour >= 0 && hour <= 6) return '#FF6B6B';      
-  if (hour >= 7 && hour <= 12) return '#FFFF6B';     
-  if (hour >= 13 && hour <= 18) return '#FFC06B';    
-  if (hour >= 19 && hour <= 23) return '#6BFF6B';    
-  return '#CCCCCC';                                  
+const getHourColor = (hour) =>
+  hour >= 0 && hour <= 6 ? '#FF6B6B' :
+  hour >= 7 && hour <= 12 ? '#FFFF6B' :
+  hour >= 13 && hour <= 18 ? '#FFC06B' :
+  hour >= 19 && hour <= 23 ? '#6BFF6B' :
+  '#CCCCCC';
+
+const GetProgressColor = (hour, dayIndex, currentDayIndex) => {
+  const dayColor = getDayColor(dayIndex, currentDayIndex);
+  return dayColor !== null ? dayColor : getHourColor(hour);
 };
 
 export default GetProgressColor;
